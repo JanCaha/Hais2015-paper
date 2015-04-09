@@ -175,8 +175,9 @@ pm10.kriged[["differenceSA"]] <- pm10.kriged[['maximalSA']] - pm10.kriged[["mini
 pm10.kriged[["difference"]] <- pm10.kriged[['maximal']] - pm10.kriged[["minimal"]]
 
 #visualize the range of estimates for optimisation scheme and simulated annealing
-spplot(pm10.kriged, c("difference","differenceSA"), names.attr= c("difference","difference SA"), colorkey=list(space="bottom"),
-       layout=c(2,1), pretty=TRUE)
+spplot(pm10.kriged, c("difference","differenceSA"),
+       names.attr= c("difference according to optimisation scheme","difference according to simulated annealing"),
+       colorkey=list(space="bottom"), layout=c(2,1), pretty=TRUE)
 #based on this result it is concluded that simulated annealing provides more complete estimates
 
 #plot limits of fuzzy surface estimated by simulated annealing
